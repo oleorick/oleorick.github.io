@@ -3,297 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonardo Henrique Alves | Currículo & Portfólio</title>
+    <title>Léo Rick | Currículo & Portfólio</title>
+    <!-- Tailwind CSS para estilização rápida e moderna -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --text-primary: #c9d1d9;
-            --text-secondary: #8b949e;
-            --accent: #58a6ff;
-            --border: #30363d;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-        }
-
         body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.6;
-            padding: 20px;
+            background-color: #0f172a; /* Tom escuro Tokyonight */
+            color: #f8fafc;
         }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        details > summary {
+            list-style: none;
         }
-
-        header {
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 25px;
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            color: var(--accent);
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .contact-info a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            margin-bottom: 35px;
-        }
-
-        h2 {
-            font-size: 1.3rem;
-            color: #ffffff;
-            border-left: 4px solid var(--accent);
-            padding-left: 10px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        p {
-            color: var(--text-primary);
-            margin-bottom: 12px;
-        }
-
-        .experience-item, .education-item {
-            margin-bottom: 25px;
-            position: relative;
-            padding-left: 15px;
-            border-left: 2px solid var(--border);
-        }
-
-        .job-title {
-            font-weight: bold;
-            color: #ffffff;
-            font-size: 1.05rem;
-        }
-
-        .company-date {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-bottom: 8px;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            color: var(--text-secondary);
-        }
-
-        ul li {
-            margin-bottom: 5px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .skill-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border);
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        .skill-name {
-            font-weight: 600;
-            margin-bottom: 8px;
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
-        }
-
-        .skill-bar {
-            width: 100%;
-            background: var(--border);
-            height: 8px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .skill-progress {
-            background: var(--accent);
-            height: 100%;
-            border-radius: 4px;
-        }
-
-        footer {
-            text-align: center;
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
+        details > summary::-webkit-details-marker {
+            display: none;
         }
     </style>
 </head>
-<body>
+<body class="font-sans antialiased leading-relaxed">
 
-    <div class="container">
+    <div class="max-w-4xl mx-auto px-6 py-12">
+
         <!-- CABEÇALHO -->
-        <header>
-            <h1>Leonardo Henrique Alves</h1>
-            <div class="subtitle">Analista de Suporte Técnico & Infraestrutura</div>
-            <div class="contact-info">
-                <span>Araraquara - SP</span>
-                <span>•</span>
-                <span><a href="https://www.linkedin.com/in/leonardohalves/" target="_blank">LinkedIn</a></span>
-                <span>•</span>
-                <span><a href="https://github.com/oleorick" target="_blank">GitHub</a></span>
-                <span>•</span>
-                <span><a href="https://instagram.com/oleorick/" target="_blank">Instagram</a></span>
-                <span>•</span>
-                <span><a href="https://twitch.tv/oleorick/" target="_blank">Twitch</a></span>
+        <header class="border-b border-slate-800 pb-8 mb-8 flex flex-col md:flex-row items-center gap-6">
+            <img src="https://avatars.githubusercontent.com/u/oleorick" alt="Léo Rick" class="w-28 h-28 rounded-full border-2 border-cyan-500 shadow-lg object-cover">
+            <div class="text-center md:text-left">
+                <h1 class="text-3xl font-bold tracking-tight text-cyan-400">Léo Rick</h1>
+                <p class="text-lg text-slate-300 mt-1">Estudante de ADS na FATEC | Aspirante a UI/UX Designer & Dev</p>
+                <p class="text-sm text-slate-400 mt-2">📍 Araraquara, SP | 🐈‍⬛ Amante de gatos e tecnologia</p>
+                <div class="flex justify-center md:justify-start gap-3 mt-4">
+                    <a href="https://github.com/oleorick" target="_blank" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-md border border-slate-700 transition">GitHub</a>
+                    <a href="https://www.linkedin.com/in/leonardohalves/" target="_blank" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-md border border-slate-700 transition">LinkedIn</a>
+                </div>
             </div>
         </header>
 
-        <!-- RESUMO -->
-        <section>
-            <h2>Resumo Profissional</h2>
-            <p>Estudante de Análise e Desenvolvimento de Sistemas na FATEC, combinando uma sólida base de mais de 10 anos de experiência em suporte técnico corporativo (N1/N2), monitoramento de servidores e tratamento de dados em empresas de grande porte (como Serasa S.A. e CPFL). Profissional focado em resolução analítica de problemas, estabilidade de ambientes em produção, automação de processos e excelência no atendimento corporativo.</p>
+        <!-- SOBRE MIM -->
+        <section class="mb-10 bg-slate-900/50 p-6 rounded-xl border border-slate-800">
+            <h2 class="text-xl font-semibold text-cyan-400 mb-3">👋 Sobre Mim</h2>
+            <p class="text-slate-300 text-sm leading-relaxed">
+                Programador em transição de carreira, autodidata e apaixonado por automação, tecnologia e design UI/UX. Trago uma sólida bagagem em suporte técnico corporativo avançado (N1/N2), monitoramento de servidores e tratamento de dados. Quando não estou codando ou estudando arquitetura de software, estou jogando ou sendo controlado pelo meu gato, o Banguela.
+            </p>
         </section>
 
-        <!-- GRÁFICOS DE SKILLS -->
-        <section>
-            <h2>Habilidades & Competências Técnicas</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-name"><span>Suporte Técnico N1/N2</span><span>95%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name"><span>Monitoramento de Servidores & Check-ins</span><span>90%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name"><span>Análise & Tratamento de Dados</span><span>85%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name"><span>Gestão de Usuários, Permissões & Backups</span><span>90%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name"><span>Diagnóstico Remoto & Incidentes Críticos</span><span>90%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-name"><span>Atendimento Corporativo de Alta Demanda</span><span>95%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+        <!-- FORMAÇÃO ACADEMICA (Em cima das experiências conforme pedido) -->
+        <section class="mb-10">
+            <h2 class="text-xl font-semibold text-cyan-400 mb-4">🎓 Formação Acadêmica</h2>
+            <div class="space-y-4">
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-white">Análise e Desenvolvimento de Sistemas (ADS)</h3>
+                            <p class="text-sm text-cyan-300">FATEC Araraquara</p>
+                        </div>
+                        <span class="text-xs text-slate-400 bg-slate-800 px-2 py-1 rounded">Cursando</span>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-2">Foco em Engenharia de Software, Algoritmos, Python, Java e Projeto Integrador (TCC / Segunda Tela).</p>
                 </div>
             </div>
         </section>
 
-        <!-- EXPERIÊNCIA -->
-        <section>
-            <h2>Experiência Profissional</h2>
+        <!-- EXPERIÊNCIAS PROFISSIONAIS (Com menu dropdown de expansão) -->
+        <section class="mb-10">
+            <h2 class="text-xl font-semibold text-cyan-400 mb-4">💼 Experiência Profissional</h2>
+            <div class="space-y-4">
 
-            <div class="experience-item">
-                <div class="job-title">Atendente de Telemarketing / Suporte Técnico</div>
-                <div class="company-date">CPFL Atende • Araraquara - SP | 05/2026 – Atualmente</div>
-                <ul>
-                    <li>Atendimento estruturado a clientes do Grupo CPFL, solucionando demandas técnicas complexas de alta criticidade.</li>
-                    <li>Registro minucioso de chamados, triagem e suporte direto aos processos operacionais e de rede da companhia.</li>
-                </ul>
-            </div>
+                <!-- Experiência 01 -->
+                <details class="bg-slate-900/50 rounded-xl border border-slate-800 overflow-hidden transition group">
+                    <summary class="p-5 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/40">
+                        <div>
+                            <h3 class="font-semibold text-white">Atendente de Telemarketing / Suporte (N1/N2)</h3>
+                            <p class="text-sm text-cyan-300">CPFL Energia</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xs text-slate-400">Clique para expandir ⬇️</span>
+                        </div>
+                    </summary>
+                    <div class="p-5 border-t border-slate-800 text-sm text-slate-300 space-y-2 bg-slate-950/30">
+                        <p><strong>Atividades principais:</strong> Atendimento corporativo avançado, suporte técnico a sistemas internos, monitoramento de chamados, triagem de incidentes de infraestrutura e tratamento de dados operacionais.</p>
+                        <p class="text-xs text-slate-400">Desenvolvimento de forte resiliência, comunicação assertiva e resolução de problemas sob pressão.</p>
+                    </div>
+                </details>
 
-            <div class="experience-item">
-                <div class="job-title">Auxiliar de Análise de Dados</div>
-                <div class="company-date">Serasa S.A • São Carlos - SP | 06/2017 – 02/2018</div>
-                <ul>
-                    <li>Gestão, validação e monitoramento de remessas de dados de alta volumetria enviadas por empresas parceiras.</li>
-                    <li>Atuação direta no suporte e homologação de novos parceiros, orientando sobre a utilização correta do sistema.</li>
-                    <li>Notificação ativa de inconsistências e acompanhamento de fluxos para garantia absoluta de integridade de dados.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="job-title">Analista de Suporte Técnico N1/N2</div>
-                <div class="company-date">S2IT Solutions • Araraquara - SP | 10/2014 – 06/2016</div>
-                <ul>
-                    <li>Execução de check-ins diários e monitoramento ativo de servidores, processos e serviços críticos em ambiente de produção.</li>
-                    <li>Atuação especializada em suporte N2, resolvendo incidentes de alta complexidade e prestando suporte avançado a usuários e processos.</li>
-                    <li>Realização de rotinas de backup de dados, correções estruturais, ajustes de sistema e gerenciamento de cadastros e permissões.</li>
-                    <li>Triagem de primeiro nível, diagnósticos remotos e escalonamento estruturado de chamados para as equipes de N3.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="job-title">Atendente de Suporte Técnico (Contrato Gás Brasiliano)</div>
-                <div class="company-date">CPFL Atende • Araraquara - SP | 01/2013 – 10/2014</div>
-                <ul>
-                    <li>Atendimento especializado, triagem de ocorrências técnicas de infraestrutura e acionamento tático de equipes de campo.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="job-title">Atendente de Suporte Técnico</div>
-                <div class="company-date">Lider Telecom • Araraquara - SP | 06/2010 – 10/2011</div>
-                <ul>
-                    <li>Diagnóstico remoto de falhas de conexão de internet (Speedy) e redes telefônicas, realizando abertura e acompanhamento de ordens de serviço.</li>
-                </ul>
             </div>
         </section>
 
-        <!-- FORMAÇÃO -->
-        <section>
-            <h2>Formação Acadêmica</h2>
-            <div class="education-item">
-                <div class="job-title">Curso Superior de Tecnologia (CST) em Análise e Desenvolvimento de Sistemas</div>
-                <div class="company-date">FATEC Araraquara • Cursando</div>
-                <p>Foco em engenharia de software, arquitetura de sistemas e modelagem de projetos tecnológicos.</p>
-            </div>
-            <div class="education-item">
-                <div class="job-title">Técnico em Hardware – Manutenção de Computadores e Notebooks</div>
-                <div class="company-date">People Computação • 2011</div>
+        <!-- SKILLS / HABILIDADES (Estilo Ficha de RPG / Barras) -->
+        <section class="mb-10">
+            <h2 class="text-xl font-semibold text-cyan-400 mb-4">🚀 Skills & Tecnologias</h2>
+            <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                
+                <div class="space-y-3">
+                    <div>
+                        <div class="flex justify-between mb-1"><span>🛠️ Suporte Técnico & Infra (N1/N2)</span><span class="text-green-400 font-bold">90%</span></div>
+                        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-green-500 h-full" style="width: 90%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1"><span>📊 Análise de Dados</span><span class="text-green-400 font-bold">80%</span></div>
+                        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-green-500 h-full" style="width: 80%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1"><span>💻 Git & Markdown</span><span class="text-yellow-500 font-bold">70%</span></div>
+                        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-yellow-500 h-full" style="width: 70%"></div></div>
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <div>
+                        <div class="flex justify-between mb-1"><span>🌐 HTML, CSS & Tailwind</span><span class="text-orange-400 font-bold">60%</span></div>
+                        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-orange-500 h-full" style="width: 60%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1"><span>⚡ JavaScript & Python</span><span class="text-orange-400 font-bold">50% - 20%</span></div>
+                        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-orange-500 h-full" style="width: 35%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1"><span>🎨 UI/UX Design & Figma</span><span class="text-orange-400 font-bold">20%</span></div>
+                        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-orange-500 h-full" style="width: 20%"></div></div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- FOOTER -->
-        <footer>
-            <p>QG System v4.0 — Desenvolvido por Leonardo H. Alves 🚀</p>
+        <!-- RODAPÉ -->
+        <footer class="text-center text-xs text-slate-500 border-t border-slate-800 pt-6">
+            <p>© 2026 Léo Rick. Construído com HTML, Tailwind e muita dedicação. 🚀</p>
         </footer>
+
     </div>
 
 </body>
