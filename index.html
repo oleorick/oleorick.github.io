@@ -17,11 +17,47 @@
         details > summary::-webkit-details-marker {
             display: none;
         }
+
+        /* Estilo especial para quando a pessoa clicar em "Salvar PDF / Imprimir" */
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            /* Abre todos os dropdowns automaticamente na folha impressa/PDF */
+            details {
+                open: true;
+            }
+            details > div {
+                display: block !important;
+            }
+            .bg-slate-900\/40, .bg-slate-900\/50, details {
+                background-color: #f8fafc !important;
+                border-color: #cbd5e1 !important;
+                color: #000000 !important;
+            }
+            text-white, .text-cyan-400, .text-slate-300 {
+                color: #000000 !important;
+            }
+        }
     </style>
 </head>
 <body class="font-sans antialiased leading-relaxed">
 
     <div class="max-w-3xl mx-auto px-6 py-10">
+
+        <!-- BOTÕES DE AÇÃO RÁPIDA (Não aparecem na hora de gerar o PDF) -->
+        <div class="no-print flex justify-end gap-3 mb-6">
+            <button onclick="window.print()" class="px-3 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold rounded-lg shadow transition flex items-center gap-1.5">
+                🖨️ Salvar PDF / Imprimir
+            </button>
+            <button onclick="compartilharPerfil()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-lg border border-slate-700 transition flex items-center gap-1.5">
+                🔗 Compartilhar
+            </button>
+        </div>
 
         <!-- CABEÇALHO MINIMALISTA -->
         <header class="border-b border-slate-800 pb-6 mb-8 flex items-center gap-5">
@@ -44,7 +80,7 @@
             </p>
         </section>
 
-        <!-- SKILLS / HABILIDADES (Em formato de badges limpas e compactas) -->
+        <!-- SKILLS -->
         <section class="mb-8">
             <h2 class="text-sm font-semibold tracking-wider text-cyan-400 uppercase mb-3">Skills & Tecnologias</h2>
             <div class="flex flex-wrap gap-2 text-xs">
@@ -66,42 +102,29 @@
             <h2 class="text-sm font-semibold tracking-wider text-cyan-400 uppercase mb-3">Formação Acadêmica & Cursos</h2>
             <div class="space-y-3 text-sm">
                 <div class="flex justify-between items-center bg-slate-900/40 p-3 rounded-lg border border-slate-800/80">
-                    <div>
-                        <p class="font-medium text-white">Análise e Desenvolvimento de Sistemas (ADS) - FATEC Araraquara</p>
-                    </div>
+                    <div><p class="font-medium text-white">Análise e Desenvolvimento de Sistemas (ADS) - FATEC Araraquara</p></div>
                     <span class="text-xs text-orange-300 bg-orange-950/60 border border-orange-800/50 px-2 py-0.5 rounded font-medium">Cursando</span>
                 </div>
                 <div class="flex justify-between items-center bg-slate-900/40 p-3 rounded-lg border border-slate-800/80">
-                    <div>
-                        <p class="font-medium text-white">Curso Profissionalizante de Hardware & Manutenção</p>
-                    </div>
+                    <div><p class="font-medium text-white">Curso Profissionalizante de Hardware & Manutenção</p></div>
                     <span class="text-xs text-purple-300 bg-purple-950/60 border border-purple-800/50 px-2 py-0.5 rounded font-medium">Concluído</span>
                 </div>
                 <div class="flex justify-between items-center bg-slate-900/40 p-3 rounded-lg border border-slate-800/80">
-                    <div>
-                        <p class="font-medium text-white">Ensino Médio Completo</p>
-                    </div>
+                    <div><p class="font-medium text-white">Ensino Médio Completo</p></div>
                     <span class="text-xs text-purple-300 bg-purple-950/60 border border-purple-800/50 px-2 py-0.5 rounded font-medium">Concluído</span>
                 </div>
             </div>
         </section>
 
-        <!-- EXPERIÊNCIA PROFISSIONAL (Com dropdowns discretos) -->
+        <!-- EXPERIÊNCIA PROFISSIONAL -->
         <section class="mb-8">
             <h2 class="text-sm font-semibold tracking-wider text-cyan-400 uppercase mb-3">Experiência Profissional</h2>
             <div class="space-y-2 text-sm">
 
-                <!-- CPFL Atende -->
                 <details class="bg-slate-900/40 rounded-lg border border-slate-800/80 overflow-hidden transition">
                     <summary class="p-3 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
-                        <div>
-                            <span class="font-medium text-white">Atendente de Telemarketing / Suporte Técnico</span>
-                            <span class="text-xs text-slate-400 block">CPFL Atende | Araraquara - SP</span>
-                        </div>
-                        <div class="text-right">
-                            <span class="text-xs text-slate-400 block">05/2026 – Atualmente</span>
-                            <span class="text-xs text-cyan-400">Expandir ▾</span>
-                        </div>
+                        <div><span class="font-medium text-white">Atendente de Telemarketing / Suporte Técnico</span><span class="text-xs text-slate-400 block">CPFL Atende | Araraquara - SP</span></div>
+                        <div class="text-right"><span class="text-xs text-slate-400 block">05/2026 – Atualmente</span><span class="text-xs text-cyan-400">Expandir ▾</span></div>
                     </summary>
                     <div class="p-3 border-t border-slate-800 text-xs text-slate-300 space-y-1.5 bg-slate-950/20">
                         <p>• Atendimento estruturado a clientes do Grupo CPFL, solucionando demandas técnicas complexas de alta criticidade.</p>
@@ -109,9 +132,75 @@
                     </div>
                 </details>
 
-                <!-- Serasa S.A -->
                 <details class="bg-slate-900/40 rounded-lg border border-slate-800/80 overflow-hidden transition">
                     <summary class="p-3 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
-                        <div>
-                            <span class="font-medium text-white">Auxiliar de Análise de Dados</span>
-                            <span class
+                        <div><span class="font-medium text-white">Auxiliar de Análise de Dados</span><span class="text-xs text-slate-400 block">Serasa S.A | São Carlos - SP</span></div>
+                        <div class="text-right"><span class="text-xs text-slate-400 block">06/2017 – 02/2018</span><span class="text-xs text-cyan-400">Expandir ▾</span></div>
+                    </summary>
+                    <div class="p-3 border-t border-slate-800 text-xs text-slate-300 space-y-1.5 bg-slate-950/20">
+                        <p>• Gestão, validação e monitoramento de remessas de dados de alta volumetria enviadas por empresas parceiras.</p>
+                        <p>• Atuação direta no suporte e homologação de novos parceiros, orientando sobre a utilização correta do sistema e processamento de dados.</p>
+                        <p>• Notificação ativa de inconsistências e acompanhamento de fluxos para garantia absoluta de integridade de dados.</p>
+                    </div>
+                </details>
+
+                <details class="bg-slate-900/40 rounded-lg border border-slate-800/80 overflow-hidden transition">
+                    <summary class="p-3 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
+                        <div><span class="font-medium text-white">Analista de Suporte Técnico N1/N2</span><span class="text-xs text-slate-400 block">S2IT Solutions | Araraquara - SP</span></div>
+                        <div class="text-right"><span class="text-xs text-slate-400 block">10/2014 – 06/2016</span><span class="text-xs text-cyan-400">Expandir ▾</span></div>
+                    </summary>
+                    <div class="p-3 border-t border-slate-800 text-xs text-slate-300 space-y-1.5 bg-slate-950/20">
+                        <p>• Execução de check-ins diários e monitoramento ativo de servidores, processos e serviços críticos em ambiente de produção.</p>
+                        <p>• Atuação especializada em suporte N2, resolvendo incidentes de alta complexidade e prestando suporte avançado a usuários e processos corporativos.</p>
+                        <p>• Realização de rotinas de backup de dados, correções estruturais, ajustes de sistema e gerenciamento de cadastros e permissões.</p>
+                        <p>• Triagem de primeiro nível, diagnósticos remotos e escalonamento estruturado de chamados para as equipes de N3 (infraestrutura avançada).</p>
+                    </div>
+                </details>
+
+                <details class="bg-slate-900/40 rounded-lg border border-slate-800/80 overflow-hidden transition">
+                    <summary class="p-3 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
+                        <div><span class="font-medium text-white">Atendente de Suporte Técnico</span><span class="text-xs text-slate-400 block">CPFL Atende (Contrato Gás Brasiliano) | Araraquara - SP</span></div>
+                        <div class="text-right"><span class="text-xs text-slate-400 block">01/2013 – 10/2014</span><span class="text-xs text-cyan-400">Expandir ▾</span></div>
+                    </summary>
+                    <div class="p-3 border-t border-slate-800 text-xs text-slate-300 space-y-1.5 bg-slate-950/20">
+                        <p>• Atendimento especializado, triagem de ocorrências técnicas de infraestrutura e acionamento tático de equipes de campo.</p>
+                    </div>
+                </details>
+
+                <details class="bg-slate-900/40 rounded-lg border border-slate-800/80 overflow-hidden transition">
+                    <summary class="p-3 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
+                        <div><span class="font-medium text-white">Atendente de Suporte Técnico</span><span class="text-xs text-slate-400 block">Lider Telecom | Araraquara - SP</span></div>
+                        <div class="text-right"><span class="text-xs text-slate-400 block">06/2010 – 10/2011</span><span class="text-xs text-cyan-400">Expandir ▾</span></div>
+                    </summary>
+                    <div class="p-3 border-t border-slate-800 text-xs text-slate-300 space-y-1.5 bg-slate-950/20">
+                        <p>• Diagnóstico remoto de falhas de conexão de internet (Speedy) e redes telefônicas, realizando abertura e acompanhamento de ordens de serviço técnicas.</p>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- RODAPÉ -->
+        <footer class="text-center text-xs text-slate-500 border-t border-slate-800 pt-6">
+            <p>© 2026 Léo Rick. 🚀</p>
+        </footer>
+
+    </div>
+
+    <!-- Script do Botão de Compartilhar -->
+    <script>
+        function compartilharPerfil() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Léo Rick | Currículo & Portfólio',
+                    text: 'Confira o currículo e portfólio profissional de Léo Rick!',
+                    url: window.location.href,
+                }).catch(() => {});
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link copiado para a área de transferência!');
+            }
+        }
+    </script>
+</body>
+</html>
