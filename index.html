@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Léo Rick | Currículo & Portfólio</title>
+    <title>Léo Rick | Currículo Profissional</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -18,7 +18,7 @@
             display: none;
         }
 
-        /* Estilo para garantir que tudo expanda e fique limpo no PDF/Impressão */
+        /* Estilo otimizado para garantir que tudo expanda e fique limpo no PDF/Impressão */
         @media print {
             body {
                 background-color: #ffffff !important;
@@ -44,9 +44,9 @@
         }
     </style>
 </head>
-<body class="font-sans antialiased leading-relaxed">
+<body class="font-sans antialiased leading-relaxed text-sm">
 
-    <div class="max-w-3xl mx-auto px-6 py-10">
+    <div class="max-w-5xl mx-auto px-6 py-10">
 
         <!-- BOTÕES DE AÇÃO RÁPIDA (Some na hora de gerar o PDF) -->
         <div class="no-print flex justify-end gap-3 mb-6">
@@ -58,12 +58,12 @@
             </button>
         </div>
 
-        <!-- CABEÇALHO MINIMALISTA -->
+        <!-- CABEÇALHO -->
         <header class="border-b border-slate-800 pb-6 mb-6 flex items-center gap-5">
-            <img src="https://github.com/oleorick.png" alt="Banguela Pet & Léo Rick" class="w-16 h-16 rounded-full border border-cyan-500 shadow object-cover">
+            <img src="https://github.com/oleorick.png" alt="Banguela Pet & Léo Rick" class="w-20 h-20 rounded-full border border-cyan-500 shadow object-cover">
             <div>
-                <h1 class="text-2xl font-bold tracking-tight text-cyan-400">Léo Rick</h1>
-                <p class="text-xs text-slate-300">Estudante de ADS na FATEC | Aspirante a UI/UX Designer & Dev</p>
+                <h1 class="text-3xl font-bold tracking-tight text-cyan-400">Léo Rick</h1>
+                <p class="text-sm text-slate-300">Estudante de ADS na FATEC | Aspirante a UI/UX Designer & Dev</p>
                 <div class="flex gap-3 mt-1.5 text-xs">
                     <a href="https://github.com/oleorick" target="_blank" class="text-cyan-400 hover:underline">GitHub</a>
                     <span class="text-slate-600">•</span>
@@ -74,71 +74,114 @@
 
         <!-- SOBRE MIM -->
         <section class="mb-6">
-            <p class="text-xs text-slate-300 leading-relaxed">
+            <p class="text-base text-slate-300 leading-relaxed">
                 Programador em transição de carreira, autodidata e apaixonado por automação, tecnologia e design UI/UX. Com sólida bagagem em suporte técnico corporativo avançado (N1/N2), monitoramento de servidores e tratamento de dados. Tutorado diariamente pelo meu gato, o Banguela 🐈‍⬛.
             </p>
         </section>
 
-        <!-- SKILLS / HABILIDADES (Em tags minimalistas e limpas) -->
-        <section class="mb-6">
-            <h2 class="text-xs font-semibold tracking-wider text-cyan-400 uppercase mb-2">Skills & Tecnologias</h2>
-            <div class="flex flex-wrap gap-1.5 text-xs">
-                <span class="px-2 py-0.5 bg-slate-900/60 border border-slate-800 text-slate-300 rounded">🛠️ Suporte N1/N2 (Veterano)</span>
-                <span class="px-2 py-0.5 bg-slate-900/60 border border-slate-800 text-slate-300 rounded">📊 Análise de Dados (Aventureiro)</span>
-                <span class="px-2 py-0.5 bg-slate-900/60 border border-slate-800 text-slate-300 rounded">💻 Git & Markdown</span>
-                <span class="px-2 py-0.5 bg-slate-900/60 border border-slate-800 text-slate-300 rounded">🌐 HTML & CSS</span>
-                <span class="px-2 py-0.5 bg-slate-900/60 border border-slate-800 text-slate-300 rounded">🎨 Tailwind CSS</span>
-                <span class="px-2 py-0.5 bg-slate-900/60 border border-slate-800 text-slate-300 rounded">⚡ JavaScript</span>
-                <span class="px-2 py-0.5 bg-slate-900/60 border border-slate-800 text-slate-300 rounded">🐍 Python (Padawan)</span>
-                <span class="px-2 py-0.5 bg-slate-900/60 border border-slate-800 text-slate-300 rounded">☕ Java (Padawan)</span>
-                <span class="px-2 py-0.5 bg-slate-900/60 border border-slate-800 text-slate-300 rounded">🎨 UI/UX Design</span>
-                <span class="px-2 py-0.5 bg-slate-900/60 border border-slate-800 text-slate-300 rounded">🐈‍⬛ Figma</span>
-            </div>
-        </section>
+        <!-- GRID DE DUAS COLUNAS: SKILLS & FORMAÇÃO -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-stretch">
 
-        <!-- FORMAÇÃO ACADÊMICA -->
-        <section class="mb-6">
-            <h2 class="text-xs font-semibold tracking-wider text-cyan-400 uppercase mb-2">Formação Acadêmica & Cursos</h2>
-            <div class="space-y-2 text-xs">
-                <div class="flex justify-between items-center bg-slate-900/40 px-3 py-2 rounded border border-slate-800/80">
-                    <span class="font-medium text-white">Análise e Desenvolvimento de Sistemas (ADS) - FATEC Araraquara</span>
-                    <span class="text-[10px] text-orange-300 bg-orange-950/60 border border-orange-800/50 px-2 py-0.5 rounded font-medium">Cursando</span>
+            <!-- SKILLS / HABILIDADES (Com descrições completas restauradas) -->
+            <section class="flex flex-col">
+                <h2 class="text-xs font-semibold tracking-wider text-cyan-400 uppercase mb-3">Skills, Ferramentas & Criatividade</h2>
+                <div class="bg-slate-900/40 p-4 rounded-lg border border-slate-800/80 space-y-3.5 text-sm flex-1 flex flex-col justify-between">
+                    
+                    <div class="grid grid-cols-12 items-center gap-2">
+                        <span class="col-span-4 text-white font-medium text-xs">💻 Git & Markdown</span>
+                        <div class="col-span-3 bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-blue-500 h-full" style="width: 40%"></div></div>
+                        <span class="col-span-5 text-right text-blue-400 font-bold text-xs">40% Aventureiro (Intermediário)</span>
+                    </div>
+
+                    <div class="grid grid-cols-12 items-center gap-2">
+                        <span class="col-span-4 text-white font-medium text-xs">📚 Notion & Organização</span>
+                        <div class="col-span-3 bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-blue-500 h-full" style="width: 45%"></div></div>
+                        <span class="col-span-5 text-right text-blue-400 font-bold text-xs">45% Aventureiro (Intermediário)</span>
+                    </div>
+
+                    <div class="grid grid-cols-12 items-center gap-2">
+                        <span class="col-span-4 text-white font-medium text-xs">🎨 Photoshop & Visual</span>
+                        <div class="col-span-3 bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-blue-500 h-full" style="width: 40%"></div></div>
+                        <span class="col-span-5 text-right text-blue-400 font-bold text-xs">40% Aventureiro (Intermediário)</span>
+                    </div>
+
+                    <div class="grid grid-cols-12 items-center gap-2">
+                        <span class="col-span-4 text-white font-medium text-xs">🎬 Premiere & Vídeo</span>
+                        <div class="col-span-3 bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-blue-500 h-full" style="width: 35%"></div></div>
+                        <span class="col-span-5 text-right text-blue-400 font-bold text-xs">35% Aventureiro (Intermediário)</span>
+                    </div>
+
+                    <div class="grid grid-cols-12 items-center gap-2">
+                        <span class="col-span-4 text-white font-medium text-xs">🐈‍⬛ Figma & UI/UX</span>
+                        <div class="col-span-3 bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-orange-500 h-full" style="width: 30%"></div></div>
+                        <span class="col-span-5 text-right text-orange-400 font-bold text-xs">30% Padawan (Iniciante)</span>
+                    </div>
+
+                    <div class="grid grid-cols-12 items-center gap-2">
+                        <span class="col-span-4 text-white font-medium text-xs">🐍 Python (Algoritmos)</span>
+                        <div class="col-span-3 bg-slate-800 h-2 rounded-full overflow-hidden"><div class="bg-orange-500 h-full" style="width: 20%"></div></div>
+                        <span class="col-span-5 text-right text-orange-400 font-bold text-xs">20% Padawan (Iniciante)</span>
+                    </div>
+
                 </div>
-                <div class="flex justify-between items-center bg-slate-900/40 px-3 py-2 rounded border border-slate-800/80">
-                    <span class="font-medium text-white">Curso Profissionalizante de Hardware & Manutenção</span>
-                    <span class="text-[10px] text-purple-300 bg-purple-950/60 border border-purple-800/50 px-2 py-0.5 rounded font-medium">Concluído</span>
+            </section>
+
+            <!-- FORMAÇÃO ACADÊMICA & CURSOS -->
+            <section class="flex flex-col">
+                <h2 class="text-xs font-semibold tracking-wider text-cyan-400 uppercase mb-3">Formação Acadêmica & Cursos</h2>
+                <div class="space-y-3 text-sm flex-1 flex flex-col justify-between">
+                    
+                    <div class="bg-slate-900/40 p-4 rounded-lg border border-slate-800/80 flex flex-col justify-between flex-1">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="font-semibold text-white text-sm">Análise e Desenvolvimento de Sistemas (ADS)</span>
+                                <span class="text-[10px] text-orange-300 bg-orange-950/60 border border-orange-800/50 px-1.5 py-0.5 rounded font-medium">Cursando</span>
+                            </div>
+                            <p class="text-xs text-cyan-400 mb-1">FATEC Araraquara</p>
+                            <p class="text-sm text-slate-300 leading-tight">Estudo aprofundado em engenharia de software, arquitetura de sistemas, estruturas de dados, algoritmos, modelagem de banco de dados e desenvolvimento voltado para o ecossistema corporativo.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/40 p-4 rounded-lg border border-slate-800/80 flex flex-col justify-between flex-1">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="font-semibold text-white text-sm">Curso Profissionalizante de Hardware & Manutenção</span>
+                                <span class="text-[10px] text-purple-300 bg-purple-950/60 border border-purple-800/50 px-1.5 py-0.5 rounded font-medium">Concluído</span>
+                            </div>
+                            <p class="text-xs text-cyan-400 mb-1">Escola Profissionalizante</p>
+                            <p class="text-sm text-slate-300 leading-tight">Montagem e manutenção de PCs, limpeza técnica, diagnóstico avançado de falhas, configuração de hardware e redes, além de rotinas de manutenção preventiva.</p>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="flex justify-between items-center bg-slate-900/40 px-3 py-2 rounded border border-slate-800/80">
-                    <span class="font-medium text-white">Ensino Médio Completo</span>
-                    <span class="text-[10px] text-purple-300 bg-purple-950/60 border border-purple-800/50 px-2 py-0.5 rounded font-medium">Concluído</span>
-                </div>
-            </div>
-        </section>
+            </section>
+
+        </div>
 
         <!-- EXPERIÊNCIA PROFISSIONAL -->
         <section class="mb-6">
             <h2 class="text-xs font-semibold tracking-wider text-cyan-400 uppercase mb-2">Experiência Profissional</h2>
-            <div class="space-y-2 text-xs">
+            <div class="space-y-2 text-sm">
 
                 <!-- CPFL Atende -->
-                <details class="bg-slate-900/40 rounded border border-slate-800/80 overflow-hidden transition">
-                    <summary class="p-2.5 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
-                        <div><span class="font-medium text-white">Atendente de Telemarketing / Suporte Técnico</span><span class="text-[11px] text-slate-400">CPFL Atende | Araraquara - SP</span></div>
-                        <div class="text-right"><span class="text-[11px] text-slate-400">05/2026 – Atualmente</span><span class="text-[10px] text-cyan-400 block">Expandir ▾</span></div>
+                <details class="bg-slate-900/40 rounded border border-slate-800/80 overflow-hidden transition" open>
+                    <summary class="p-3.5 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/35">
+                        <div><span class="font-medium text-white text-sm">Atendente de Telemarketing / Suporte Técnico</span><span class="text-xs text-slate-400 block">CPFL Atende | Araraquara - SP</span></div>
+                        <div class="text-right"><span class="text-xs text-slate-400">05/2026 – Atualmente</span><span class="text-[10px] text-cyan-400 block">Expandir ▾</span></div>
                     </summary>
-                    <div class="p-2.5 border-t border-slate-800 text-[11px] text-slate-300 space-y-1 bg-slate-950/20">
+                    <div class="p-3.5 border-t border-slate-800 text-sm text-slate-300 space-y-1.5 bg-slate-950/20">
                         <p>• Atendimento estruturado a clientes do Grupo CPFL, solucionando demandas técnicas complexas de alta criticidade.</p>
                         <p>• Registro minucioso de chamados, triagem e suporte direto aos processos operacionais e de rede da companhia.</p>
                     </div>
                 </details>
 
                 <!-- Serasa S.A -->
-                <details class="bg-slate-900/40 rounded border border-slate-800/80 overflow-hidden transition">
-                    <summary class="p-2.5 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
-                        <div><span class="font-medium text-white">Auxiliar de Análise de Dados</span><span class="text-[11px] text-slate-400">Serasa S.A | São Carlos - SP</span></div>
-                        <div class="text-right"><span class="text-[11px] text-slate-400">06/2017 – 02/2018</span><span class="text-[10px] text-cyan-400 block">Expandir ▾</span></div>
+                <details class="bg-slate-900/40 rounded border border-slate-800/80 overflow-hidden transition" open>
+                    <summary class="p-3.5 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/35">
+                        <div><span class="font-medium text-white text-sm">Auxiliar de Análise de Dados</span><span class="text-xs text-slate-400 block">Serasa S.A | São Carlos - SP</span></div>
+                        <div class="text-right"><span class="text-xs text-slate-400">06/2017 – 02/2018</span><span class="text-[10px] text-cyan-400 block">Expandir ▾</span></div>
                     </summary>
-                    <div class="p-2.5 border-t border-slate-800 text-[11px] text-slate-300 space-y-1 bg-slate-950/20">
+                    <div class="p-3.5 border-t border-slate-800 text-sm text-slate-300 space-y-1.5 bg-slate-950/20">
                         <p>• Gestão, validação e monitoramento de remessas de dados de alta volumetria enviadas por empresas parceiras.</p>
                         <p>• Atuação direta no suporte e homologação de novos parceiros, orientando sobre a utilização correta do sistema e processamento de dados.</p>
                         <p>• Notificação ativa de inconsistências e acompanhamento de fluxos para garantia absoluta de integridade de dados.</p>
@@ -146,12 +189,12 @@
                 </details>
 
                 <!-- S2IT Solutions -->
-                <details class="bg-slate-900/40 rounded border border-slate-800/80 overflow-hidden transition">
-                    <summary class="p-2.5 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
-                        <div><span class="font-medium text-white">Analista de Suporte Técnico N1/N2</span><span class="text-[11px] text-slate-400">S2IT Solutions | Araraquara - SP</span></div>
-                        <div class="text-right"><span class="text-[11px] text-slate-400">10/2014 – 06/2016</span><span class="text-[10px] text-cyan-400 block">Expandir ▾</span></div>
+                <details class="bg-slate-900/40 rounded border border-slate-800/80 overflow-hidden transition" open>
+                    <summary class="p-3.5 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/35">
+                        <div><span class="font-medium text-white text-sm">Analista de Suporte Técnico N1/N2</span><span class="text-xs text-slate-400 block">S2IT Solutions | Araraquara - SP</span></div>
+                        <div class="text-right"><span class="text-xs text-slate-400">10/2014 – 06/2016</span><span class="text-[10px] text-cyan-400 block">Expandir ▾</span></div>
                     </summary>
-                    <div class="p-2.5 border-t border-slate-800 text-[11px] text-slate-300 space-y-1 bg-slate-950/20">
+                    <div class="p-3.5 border-t border-slate-800 text-sm text-slate-300 space-y-1.5 bg-slate-950/20">
                         <p>• Execução de check-ins diários e monitoramento ativo de servidores, processos e serviços críticos em ambiente de produção.</p>
                         <p>• Atuação especializada em suporte N2, resolvendo incidentes de alta complexidade e prestando suporte avançado a usuários e processos corporativos.</p>
                         <p>• Realização de rotinas de backup de dados, correções estruturais, ajustes de sistema e gerenciamento de cadastros e permissões.</p>
@@ -160,23 +203,23 @@
                 </details>
 
                 <!-- CPFL Atende (Contrato Gás Brasiliano) -->
-                <details class="bg-slate-900/40 rounded border border-slate-800/80 overflow-hidden transition">
-                    <summary class="p-2.5 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
-                        <div><span class="font-medium text-white">Atendente de Suporte Técnico</span><span class="text-[11px] text-slate-400">CPFL Atende (Contrato Gás Brasiliano) | Araraquara - SP</span></div>
-                        <div class="text-right"><span class="text-[11px] text-slate-400">01/2013 – 10/2014</span><span class="text-[10px] text-cyan-400 block">Expandir ▾</span></div>
+                <details class="bg-slate-900/40 rounded border border-slate-800/80 overflow-hidden transition" open>
+                    <summary class="p-3.5 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/35">
+                        <div><span class="font-medium text-white text-sm">Atendente de Suporte Técnico</span><span class="text-xs text-slate-400 block">CPFL Atende (Contrato Gás Brasiliano) | Araraquara - SP</span></div>
+                        <div class="text-right"><span class="text-xs text-slate-400">01/2013 – 10/2014</span><span class="text-[10px] text-cyan-400 block">Expandir ▾</span></div>
                     </summary>
-                    <div class="p-2.5 border-t border-slate-800 text-[11px] text-slate-300 space-y-1 bg-slate-950/20">
+                    <div class="p-3.5 border-t border-slate-800 text-sm text-slate-300 space-y-1.5 bg-slate-950/20">
                         <p>• Atendimento especializado, triagem de ocorrências técnicas de infraestrutura e acionamento tático de equipes de campo.</p>
                     </div>
                 </details>
 
                 <!-- Lider Telecom -->
-                <details class="bg-slate-900/40 rounded border border-slate-800/80 overflow-hidden transition">
-                    <summary class="p-2.5 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
-                        <div><span class="font-medium text-white">Atendente de Suporte Técnico</span><span class="text-[11px] text-slate-400">Lider Telecom | Araraquara - SP</span></div>
-                        <div class="text-right"><span class="text-[11px] text-slate-400">06/2010 – 10/2011</span><span class="text-[10px] text-cyan-400 block">Expandir ▾</span></div>
+                <details class="bg-slate-900/40 rounded border border-slate-800/80 overflow-hidden transition" open>
+                    <summary class="p-3.5 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/35">
+                        <div><span class="font-medium text-white text-sm">Atendente de Suporte Técnico</span><span class="text-xs text-slate-400 block">Lider Telecom | Araraquara - SP</span></div>
+                        <div class="text-right"><span class="text-xs text-slate-400">06/2010 – 10/2011</span><span class="text-[10px] text-cyan-400 block">Expandir ▾</span></div>
                     </summary>
-                    <div class="p-2.5 border-t border-slate-800 text-[11px] text-slate-300 space-y-1 bg-slate-950/20">
+                    <div class="p-3.5 border-t border-slate-800 text-sm text-slate-300 space-y-1.5 bg-slate-950/20">
                         <p>• Diagnóstico remoto de falhas de conexão de internet (Speedy) e redes telefônicas, realizando abertura e acompanhamento de ordens de serviço técnicas.</p>
                     </div>
                 </details>
@@ -185,7 +228,7 @@
         </section>
 
         <!-- RODAPÉ -->
-        <footer class="text-center text-[10px] text-slate-500 border-t border-slate-800 pt-4">
+        <footer class="text-center text-xs text-slate-500 border-t border-slate-800 pt-4">
             <p>© 2026 Léo Rick. 🚀</p>
         </footer>
 
@@ -196,8 +239,8 @@
         function compartilharPerfil() {
             if (navigator.share) {
                 navigator.share({
-                    title: 'Léo Rick | Currículo & Portfólio',
-                    text: 'Confira o currículo e portfólio profissional de Léo Rick!',
+                    title: 'Léo Rick | Currículo Profissional',
+                    text: 'Confira o currículo profissional de Léo Rick!',
                     url: window.location.href,
                 }).catch(() => {});
             } else {
