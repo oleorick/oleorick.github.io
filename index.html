@@ -18,7 +18,7 @@
             display: none;
         }
 
-        /* Estilo especial para quando a pessoa clicar em "Salvar PDF / Imprimir" */
+        /* Estilo para garantir que tudo expanda e fique limpo no PDF/Impressão */
         @media print {
             body {
                 background-color: #ffffff !important;
@@ -27,9 +27,8 @@
             .no-print {
                 display: none !important;
             }
-            /* Abre todos os dropdowns automaticamente na folha impressa/PDF */
             details {
-                open: true;
+                display: block !important;
             }
             details > div {
                 display: block !important;
@@ -39,7 +38,7 @@
                 border-color: #cbd5e1 !important;
                 color: #000000 !important;
             }
-            text-white, .text-cyan-400, .text-slate-300 {
+            .text-white, .text-cyan-400, .text-slate-300, .text-slate-400 {
                 color: #000000 !important;
             }
         }
@@ -49,12 +48,12 @@
 
     <div class="max-w-3xl mx-auto px-6 py-10">
 
-        <!-- BOTÕES DE AÇÃO RÁPIDA (Não aparecem na hora de gerar o PDF) -->
+        <!-- BOTÕES DE AÇÃO RÁPIDA (Some na hora de gerar o PDF) -->
         <div class="no-print flex justify-end gap-3 mb-6">
-            <button onclick="window.print()" class="px-3 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold rounded-lg shadow transition flex items-center gap-1.5">
+            <button onclick="window.print()" class="px-3 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold rounded-lg shadow transition flex items-center gap-1.5 cursor-pointer">
                 🖨️ Salvar PDF / Imprimir
             </button>
-            <button onclick="compartilharPerfil()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-lg border border-slate-700 transition flex items-center gap-1.5">
+            <button onclick="compartilharPerfil()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-lg border border-slate-700 transition flex items-center gap-1.5 cursor-pointer">
                 🔗 Compartilhar
             </button>
         </div>
@@ -80,7 +79,7 @@
             </p>
         </section>
 
-        <!-- SKILLS -->
+        <!-- SKILLS / HABILIDADES -->
         <section class="mb-8">
             <h2 class="text-sm font-semibold tracking-wider text-cyan-400 uppercase mb-3">Skills & Tecnologias</h2>
             <div class="flex flex-wrap gap-2 text-xs">
@@ -121,6 +120,7 @@
             <h2 class="text-sm font-semibold tracking-wider text-cyan-400 uppercase mb-3">Experiência Profissional</h2>
             <div class="space-y-2 text-sm">
 
+                <!-- CPFL Atende -->
                 <details class="bg-slate-900/40 rounded-lg border border-slate-800/80 overflow-hidden transition">
                     <summary class="p-3 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
                         <div><span class="font-medium text-white">Atendente de Telemarketing / Suporte Técnico</span><span class="text-xs text-slate-400 block">CPFL Atende | Araraquara - SP</span></div>
@@ -132,6 +132,7 @@
                     </div>
                 </details>
 
+                <!-- Serasa S.A -->
                 <details class="bg-slate-900/40 rounded-lg border border-slate-800/80 overflow-hidden transition">
                     <summary class="p-3 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
                         <div><span class="font-medium text-white">Auxiliar de Análise de Dados</span><span class="text-xs text-slate-400 block">Serasa S.A | São Carlos - SP</span></div>
@@ -144,6 +145,7 @@
                     </div>
                 </details>
 
+                <!-- S2IT Solutions -->
                 <details class="bg-slate-900/40 rounded-lg border border-slate-800/80 overflow-hidden transition">
                     <summary class="p-3 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
                         <div><span class="font-medium text-white">Analista de Suporte Técnico N1/N2</span><span class="text-xs text-slate-400 block">S2IT Solutions | Araraquara - SP</span></div>
@@ -157,6 +159,7 @@
                     </div>
                 </details>
 
+                <!-- CPFL Atende (Contrato Gás Brasiliano) -->
                 <details class="bg-slate-900/40 rounded-lg border border-slate-800/80 overflow-hidden transition">
                     <summary class="p-3 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
                         <div><span class="font-medium text-white">Atendente de Suporte Técnico</span><span class="text-xs text-slate-400 block">CPFL Atende (Contrato Gás Brasiliano) | Araraquara - SP</span></div>
@@ -167,6 +170,7 @@
                     </div>
                 </details>
 
+                <!-- Lider Telecom -->
                 <details class="bg-slate-900/40 rounded-lg border border-slate-800/80 overflow-hidden transition">
                     <summary class="p-3 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/30">
                         <div><span class="font-medium text-white">Atendente de Suporte Técnico</span><span class="text-xs text-slate-400 block">Lider Telecom | Araraquara - SP</span></div>
@@ -187,7 +191,7 @@
 
     </div>
 
-    <!-- Script do Botão de Compartilhar -->
+    <!-- Script de Compartilhar -->
     <script>
         function compartilharPerfil() {
             if (navigator.share) {
