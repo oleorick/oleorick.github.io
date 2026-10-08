@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Léo Rick | Currículo & Portfólio</title>
-    <!-- Tailwind CSS para estilização rápida e moderna -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-color: #0f172a; /* Tom escuro Tokyonight */
+            background-color: #0f172a;
             color: #f8fafc;
         }
         details > summary {
@@ -23,9 +23,10 @@
 
     <div class="max-w-4xl mx-auto px-6 py-12">
 
-        <!-- CABEÇALHO -->
+        <!-- CABEÇALHO COM O BANGUELA -->
         <header class="border-b border-slate-800 pb-8 mb-8 flex flex-col md:flex-row items-center gap-6">
-            <img src="https://avatars.githubusercontent.com/u/oleorick" alt="Léo Rick" class="w-28 h-28 rounded-full border-2 border-cyan-500 shadow-lg object-cover">
+            <!-- Foto do Banguela puxada direto do repositório/perfil -->
+            <img src="https://github.com/oleorick.png" alt="Banguela Pet & Léo Rick" class="w-28 h-28 rounded-full border-2 border-cyan-500 shadow-lg object-cover">
             <div class="text-center md:text-left">
                 <h1 class="text-3xl font-bold tracking-tight text-cyan-400">Léo Rick</h1>
                 <p class="text-lg text-slate-300 mt-1">Estudante de ADS na FATEC | Aspirante a UI/UX Designer & Dev</p>
@@ -45,9 +46,9 @@
             </p>
         </section>
 
-        <!-- FORMAÇÃO ACADEMICA (Em cima das experiências conforme pedido) -->
+        <!-- FORMAÇÃO ACADÊMICA (Em cima, completa: FATEC, Ensino Médio e Hardware) -->
         <section class="mb-10">
-            <h2 class="text-xl font-semibold text-cyan-400 mb-4">🎓 Formação Acadêmica</h2>
+            <h2 class="text-xl font-semibold text-cyan-400 mb-4">🎓 Formação Acadêmica & Cursos</h2>
             <div class="space-y-4">
                 <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800">
                     <div class="flex justify-between items-start">
@@ -59,24 +60,43 @@
                     </div>
                     <p class="text-xs text-slate-400 mt-2">Foco em Engenharia de Software, Algoritmos, Python, Java e Projeto Integrador (TCC / Segunda Tela).</p>
                 </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-white">Curso Profissionalizante de Hardware & Manutenção</h3>
+                            <p class="text-sm text-cyan-300">Formação Técnica</p>
+                        </div>
+                        <span class="text-xs text-slate-400 bg-slate-800 px-2 py-1 rounded">Concluído</span>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-2">Montagem, manutenção preventiva e corretiva de computadores, redes e diagnóstico de componentes.</p>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold text-white">Ensino Médio Completo</h3>
+                            <p class="text-sm text-cyan-300">Educação Básica</p>
+                        </div>
+                        <span class="text-xs text-slate-400 bg-slate-800 px-2 py-1 rounded">Concluído</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- EXPERIÊNCIAS PROFISSIONAIS (Com menu dropdown de expansão) -->
+        <!-- EXPERIÊNCIAS PROFISSIONAIS (Com menu dropdown individual para cada uma) -->
         <section class="mb-10">
             <h2 class="text-xl font-semibold text-cyan-400 mb-4">💼 Experiência Profissional</h2>
             <div class="space-y-4">
 
-                <!-- Experiência 01 -->
+                <!-- Experiência 01: CPFL -->
                 <details class="bg-slate-900/50 rounded-xl border border-slate-800 overflow-hidden transition group">
                     <summary class="p-5 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/40">
                         <div>
                             <h3 class="font-semibold text-white">Atendente de Telemarketing / Suporte (N1/N2)</h3>
                             <p class="text-sm text-cyan-300">CPFL Energia</p>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-xs text-slate-400">Clique para expandir ⬇️</span>
-                        </div>
+                        <span class="text-xs text-slate-400 bg-slate-800 px-2 py-2 rounded">Expandir ⬇️</span>
                     </summary>
                     <div class="p-5 border-t border-slate-800 text-sm text-slate-300 space-y-2 bg-slate-950/30">
                         <p><strong>Atividades principais:</strong> Atendimento corporativo avançado, suporte técnico a sistemas internos, monitoramento de chamados, triagem de incidentes de infraestrutura e tratamento de dados operacionais.</p>
@@ -84,10 +104,24 @@
                     </div>
                 </details>
 
+                <!-- Experiência 02 (Exemplo estruturado para você preencher/ajustar se tiver outra anterior) -->
+                <details class="bg-slate-900/50 rounded-xl border border-slate-800 overflow-hidden transition group">
+                    <summary class="p-5 cursor-pointer flex justify-between items-center select-none hover:bg-slate-800/40">
+                        <div>
+                            <h3 class="font-semibold text-white">Outra Experiência / Cargo Anterior</h3>
+                            <p class="text-sm text-cyan-300">Nome da Empresa / Projeto</p>
+                        </div>
+                        <span class="text-xs text-slate-400 bg-slate-800 px-2 py-2 rounded">Expandir ⬇️</span>
+                    </summary>
+                    <div class="p-5 border-t border-slate-800 text-sm text-slate-300 space-y-2 bg-slate-950/30">
+                        <p><strong>Atividades principais:</strong> Descreva aqui as tarefas executadas, suporte prestado ou projetos dos quais participou.</p>
+                    </div>
+                </details>
+
             </div>
         </section>
 
-        <!-- SKILLS / HABILIDADES (Estilo Ficha de RPG / Barras) -->
+        <!-- SKILLS / HABILIDADES COM BARRAS -->
         <section class="mb-10">
             <h2 class="text-xl font-semibold text-cyan-400 mb-4">🚀 Skills & Tecnologias</h2>
             <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
